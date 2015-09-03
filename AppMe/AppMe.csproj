@@ -96,13 +96,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Shimmer.xaml.cs">
+    <Compile Include="Examples\Shimmer\Shimmer.xaml.cs">
       <DependentUpon>Shimmer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\StripesBackgroundFill.xaml.cs">
+    <Compile Include="Examples\StripyBackgroundFill\StripesBackgroundFill.xaml.cs">
       <DependentUpon>StripesBackgroundFill.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\CircleBackgroundFill.xaml.cs">
+    <Compile Include="Examples\MaterialDesignBackgroundFill\CircleBackgroundFill.xaml.cs">
       <DependentUpon>CircleBackgroundFill.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -135,15 +135,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Examples\Shimmer.xaml">
+    <Page Include="Examples\Shimmer\Shimmer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Examples\StripesBackgroundFill.xaml">
+    <Page Include="Examples\StripyBackgroundFill\StripesBackgroundFill.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Examples\CircleBackgroundFill.xaml">
+    <Page Include="Examples\MaterialDesignBackgroundFill\CircleBackgroundFill.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
