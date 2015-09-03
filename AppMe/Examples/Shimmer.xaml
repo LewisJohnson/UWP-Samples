@@ -15,7 +15,7 @@
         </Storyboard>
     </Page.Resources>
 
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/Blurry-Tress.jpg" />
         </Grid.Background>
@@ -31,20 +31,15 @@
                                             "/>
                     </LinearGradientBrush.RelativeTransform>
                     <GradientStop Color="#7F808080" Offset="0.3"/>
-                    <GradientStop Color="White" Offset="0.5"/>
+                    <GradientStop Color="Gainsboro" Offset="0.5"/>
                     <GradientStop Color="#7F808080" Offset="0.8"/>
                 </LinearGradientBrush>
             </ContentControl.Foreground>
 
-            <StackPanel>
-                <FontIcon Glyph="&#xE009;" FontSize="100"></FontIcon>
+            <StackPanel MaxWidth="400">
+                <FontIcon Glyph="&#xE009;" FontSize="100" />
 
-                <TextBlock TextAlignment="Center" TextWrapping="WrapWholeWords" Padding="10">
-                <Run FontSize="40" FontWeight="Thin">Lewis Johnson</Run>
-                <LineBreak />
-                <Run FontSize="20" FontWeight="Thin">This Shimmer effect is pretty cool, I'm not sure what else to write here though</Run>
-                <LineBreak />
-                </TextBlock>
+                <TextBlock FontSize="25" FontWeight="ExtraLight" TextAlignment="Center" TextWrapping="WrapWholeWords" Padding="10" Text="Lewis' mission is to give people the power to share and make the world more open and connected."/>
 
             </StackPanel>
 
