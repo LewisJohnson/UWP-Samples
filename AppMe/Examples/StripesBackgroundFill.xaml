@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="AppMe.Examples.StripesBackgroundFill"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppMe.Examples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignHieght="200" d:DesignWidth="1080">
+    <Page.Resources>
+        <Storyboard x:Name="BackgroundAnimation">
+            <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(TextBlock.Foreground).(Brush.Transform).(CompositeTransform.TranslateY)" Storyboard.TargetName="FillTextBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="124"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Foreground).(Brush.RelativeTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FillTextBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(TextBlock.Foreground).(Brush.Transform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FillTextBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="BackgroundAnimation2">
+            <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(TextBlock.Foreground).(Brush.Transform).(CompositeTransform.TranslateY)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.9" Value="1000"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(TextBlock.Foreground).(Brush.Transform).(CompositeTransform.ScaleY)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+        </Storyboard>
+    </Page.Resources>
+
+
+    <StackPanel>
+        <Grid Background="Transparent" Margin="50">
+            <TextBlock Text="Text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" Foreground="Black"/>
+            <TextBlock x:Name="FillTextBlock" Text="Text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150">
+                <TextBlock.Foreground>
+                    <ImageBrush x:Name="imageBrush" ImageSource="ms-appx:///Assets/Stripes.png" Stretch="None" >
+                        <ImageBrush.Transform>
+                            <CompositeTransform ScaleY="0.1" TranslateY="-25"/>
+                        </ImageBrush.Transform>
+                        <ImageBrush.RelativeTransform>
+                            <CompositeTransform CenterY="0.5" CenterX="0.5"/>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Grid>
+
+        <Grid Background="Transparent" Margin="50">
+            <TextBlock Text="Text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" Foreground="Black"/>
+            <TextBlock x:Name="textBlock" Text="Text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150">
+                <TextBlock.Foreground>
+                    <ImageBrush  ImageSource="ms-appx:///Assets/Stripes.png" Stretch="None" >
+                        <ImageBrush.Transform>
+                            <CompositeTransform ScaleY="0.1" TranslateY="-25"/>
+                        </ImageBrush.Transform>
+                        <ImageBrush.RelativeTransform>
+                            <CompositeTransform CenterY="0.5" CenterX="0.5"/>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Grid>
+    </StackPanel>
+</Page>
